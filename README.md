@@ -102,3 +102,28 @@ Below is an example of one user element in the resulting JSON array:
   $make complie
   $make run
   ```
+
+## sample.json
+This file contains the JSON data generated from running the instructor's implementation of the `toJSON()` function in `GetData.java`. While comparing your output (`output.json`) with `sample.json`, **do not use a simple `diff` command** because JSON arrays may come out in different orders between runs. 
+
+However, both `output.json` and `sample.json` should contain the **same elements** within their JSON arrays. To properly compare the content of JSON files, you can use command-line JSON diff processors like:
+
+- **jd** (available on GitHub and online)
+- **deepdiff** 
+
+These tools allow you to correctly compare the contents of the two files.
+
+## Required JAR Files
+The following jar packages are used to compile your code:
+
+- **json_simple-1.1.jar**: For handling JSON data.
+- **json-20151123.jar**: For JSON manipulation.
+- **ojdbc6.jar**: JDBC driver for connecting to the Oracle database.
+
+These jars are essential for compiling and running the project. **Do not modify** these files.
+
+## Wrapping Up
+- **Part A** and **Part B** are independent of each other. You can set up your MongoDB database for **Part B** using the `sample.json` file to test your MongoDB queries.
+- The **Autograder testing** for Part B does not require a correct `output.json` from Part A, so you can focus on completing Part B after finishing Part A.
+- If desired, you can submit `GetData.java` from **Part A** to the Autograder without completing Part B.
+
