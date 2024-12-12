@@ -59,3 +59,25 @@ Each JSON object representing a user should contain the following fields:
 ## Example JSON Output
 
 Below is an example of one user element in the resulting JSON array:
+```javascript
+ {
+ "MOB": 10,
+ "hometown": {
+ "country": "Middle Earth",
+ "city": "Linhir",
+ "state": "Gondor"
+ },
+ "current": {
+ "country": "Middle Earth",
+ "city": "Caras Galadhon",
+ "state": "Lothlorien"
+ },
+ "gender": "female",
+ "user_id": 744,
+ "DOB": 14,
+ "last_name": "MARTINEZ",
+ "first_name": "Lily",
+ "YOB": 516,
+ "friends": [754, 760, 772, 782]
+ }
+```
