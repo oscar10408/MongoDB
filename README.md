@@ -184,3 +184,9 @@ Create a collection called flat_users . Documents in the collection follow this 
 {"user_id": 100, "friends": 300}
 ```
 ## Query 3: City Dwellers
+ Create a collection named cities . Each document in the collection should contain two fields: a field called _id holding the city name,
+ and a users field holding an array of user_id s who currently live in that city. The user_id s do not need to be sorted but should be
+ distinct. For example, if users 10, 20 and 30 live in Bucklebury, the following document will be in the collection cities :
+ ```javascript
+ {"_id": "Bucklebury", "users": [10, 20, 30]}
+```
