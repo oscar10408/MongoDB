@@ -212,3 +212,27 @@ Create a collection called flat_users . Documents in the collection follow this 
  user_id2: user_idy,
  ...}
  ```
+
+# README: Queries for Average Friend Count and Birth Months
+
+## Query 6: Average Friend Count
+ This query calculates the average number of friends a user has in the `users` collection and returns a decimal number. It takes into account users with **0 friends**, treating the number of friends a user has as the count of users in their friend list. **Users with lower IDs** are excluded from the count, as they aren't present in the friend list of higher-ID users.
+
+### Key Requirements:
+ - The number of friends is determined by the size of each user's **friends list**.
+ - Users who have **0 friends** should be included in the calculation.
+ - The result should be a decimal, and **do not round** the result to an integer.
+
+
+## Query 7: Birth Months using Aggregate
+ In this query, the goal is to use the `aggregate` command to create a collection called **countbymonth**, which will provide information about the number of users born in each month.
+
+### Key Requirements:
+ - The collection **countbymonth** should include 12 records, one for each month (MOB ranging from 1 to 12).
+ - Each record in the collection should contain two fields:
+   - **MOB**: The month number, which should be a value between 1 and 12.
+   - **borncount**: The number of users born in that specific month.
+ - The records must be **sorted by ascending order of MOB** (i.e., from month 1 to month 12).
+ - The **borncount** values should sum up to the total number of users in the original collection.
+ - The function should **not return anything** but should create the collection.
+
