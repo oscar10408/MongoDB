@@ -213,8 +213,6 @@ Create a collection called flat_users . Documents in the collection follow this 
  ...}
  ```
 
-# README: Queries for Average Friend Count and Birth Months
-
 ## Query 6: Average Friend Count
  This query calculates the average number of friends a user has in the `users` collection and returns a decimal number. It takes into account users with **0 friends**, treating the number of friends a user has as the count of users in their friend list. **Users with lower IDs** are excluded from the count, as they aren't present in the friend list of higher-ID users.
 
