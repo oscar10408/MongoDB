@@ -190,3 +190,25 @@ Create a collection called flat_users . Documents in the collection follow this 
  ```javascript
  {"_id": "Bucklebury", "users": [10, 20, 30]}
 ```
+## Query 4: Matchmaker
+ The goal of this query is to find all user ID pairs (A, B) that meet the following criteria:
+ - **User A** is male, and **User B** is female.
+ - The difference between their **year of birth (YOB)** is less than a specified threshold, **year_diff**.
+ - User A and User B are **not friends**.
+ - Both users are from the same **hometown.city**.
+
+ The query should return a JSON array of pairs, where each pair consists of two user IDs. The order of the user IDs does not matter.
+
+## Query 5: Oldest Friends
+ This query is designed to identify the oldest friend for each user who has friends. The age of friends is determined using the **year of birth (YOB)** field, and in case of a tie (i.e., two friends have the same YOB), the friend with the smallest **user_id** is considered the oldest.
+
+### Key Requirements:
+- The query will only consider **friends** whose **user_id** is greater than the **user_id** of the current user.
+- The query must take into account all existing friendships, and if needed, recreate the required collections (like `flat_users` and `cities`) in subsequent queries.
+  
+### Expected Output:
+ ```javascript
+ {user_id1: user_idx,
+ user_id2: user_idy,
+ ...}
+ ```
