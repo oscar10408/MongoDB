@@ -128,5 +128,5 @@ These jars are essential for compiling and running the project. **Do not modify*
 - If desired, you can submit `GetData.java` from **Part A** to the Autograder without completing Part B.
 
 # Part B: MongoDB Queries
-##Introduction to MongoDB
+## Introduction to MongoDB
 MongoDB is a document-oriented noSQL DBMS. Each document in MongoDB is one JSON object, with key-value pairs of data, just like how a tuple in SQL has fields of data. Each collection in MongoDB is one JSON array of multiple documents, just like how a table in SQL has multiple tuples. Refer to the following table for some high-level differences between SQL and MongoDB
