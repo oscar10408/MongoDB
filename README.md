@@ -81,3 +81,24 @@ Below is an example of one user element in the resulting JSON array:
  "friends": [754, 760, 772, 782]
  }
 ```
+---
+## Starter Files
+
+### GetData.java
+- **Purpose**: This file contains the core implementation for querying the **Oracle database** and exporting the results as a **JSON array**. You need to implement the `toJSON()` function, which queries the `users`, `friends`, and `cities` tables to retrieve the necessary data. 
+- **Note**: The `writeJSON()` function will take care of converting your output into a **JSON string** and store it in `output.json`.
+
+### Main.java
+- **Purpose**: This file serves as the main driver for running Part A. You can use it to execute your program. After running `Main.java`, an output file named `output.json` will be generated. 
+- **Note**: Modify the `oracleUserName` and `password` static variables with your own Oracle credentials:
+  ```java
+  static String oracleUserName = "uniqname"; // replace with your uniqname
+  static String password = "password"; // replace with your Oracle password
+  ```
+
+### Makefile
+- **Purpose**:Once you have implemented GetData.java and modified Main.java , you can compile and run your program.
+```bash
+$make complie
+$make run
+```
